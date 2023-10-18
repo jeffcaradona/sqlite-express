@@ -5,6 +5,15 @@ import express from "express";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
 
+import dotenv from 'dotenv';
+
+// get config vars
+dotenv.config();
+
+// access config var
+console.info(process.env.TOKEN_SECRET);
+
+
 import fp from "./models/fp.js";
 import info from "../package.json" assert { type: "json" };
 import db from "./models/db.js";
