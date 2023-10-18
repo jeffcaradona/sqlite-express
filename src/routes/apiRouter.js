@@ -7,7 +7,9 @@ router.get("/user/:id", controller.getUser);
 
 router.get("/users", controller.getUsers);
 
-router.post("/user", controller.createUser)
+router.post("/user", controller.createUser);
+router.patch("/api/user/:id",controller.updateUser);
+router.delete("/api/user/:id", controller.deleteUser);
 
 
 export default router;
