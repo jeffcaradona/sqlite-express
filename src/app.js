@@ -18,6 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.disable("x-powered-by");
 
 // Create the application object in locals for holding a connection pool
 app.locals = fp.addObject(app.locals, "dbApp", { version: info.version });
